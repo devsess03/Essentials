@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: unit4_curveslab.ma
-//Last modified: Fri, Feb 06, 2026 06:04:48 PM
+//Last modified: Fri, Feb 06, 2026 06:10:26 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "258BB1D1-4039-07B7-EBA1-398918AADDCC";
+fileInfo "UUID" "2ACACB0C-43C4-AEB8-0EB1-1E81D19F6FE7";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "2F219328-4D43-B308-9D49-199C17348C5E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 27.228713591865127 21.976613979236305 -16.655626553579818 ;
-	setAttr ".r" -type "double3" -30.338352727548212 844.19999999880883 0 ;
+	setAttr ".t" -type "double3" -8.6577683022694583 20.935911466409941 -40.776110378165342 ;
+	setAttr ".r" -type "double3" -20.738352730739084 912.19999999895811 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E026BAFA-4CFD-8DFC-3451-F7BA4B7D19EB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 34.038443579452917;
+	setAttr ".coi" 44.724798408987944;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -11599,29 +11599,9 @@ createNode transform -n "group1";
 	setAttr ".s" -type "double3" 0.52907664423272505 0.52907664423272505 0.52907664423272505 ;
 	setAttr ".rp" -type "double3" 0 3.9870622158050537 0 ;
 	setAttr ".sp" -type "double3" 0 3.9870622158050537 0 ;
-createNode transform -n "curve1" -p "group1";
-	rename -uid "9523AD73-4DB9-F01F-0CF8-D2AE1FD303B2";
-createNode nurbsCurve -n "curveShape1" -p "curve1";
-	rename -uid "1111BDE7-48F2-8452-80C7-3CB2F9B9E07B";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 7 0 no 3
-		12 0 0 0 1 2 3 4 5 6 7 7 7
-		10
-		0 3.9916983826736598 0.3441321326870872
-		0 4.1587231552436634 0.62473375060469294
-		0 4.4526867549668703 0.78507753227189625
-		0 4.8000982819124776 0.83852545949429791
-		0 5.3679825086504902 0.74499158685509537
-		0 5.7087130446932974 0.48443294164588913
-		0 5.9225047535829027 0.27064123275628604
-		0 6.0561245716389047 0.18378835101988397
-		0 6.1697014169865074 0.21051231463108391
-		0 6.2031063715005086 0.25727925095068516
-		;
 createNode transform -n "loftedSurface1" -p "group1";
 	rename -uid "56B4CBB9-4B61-6EFE-3D4E-98B805767586";
-	setAttr ".t" -type "double3" 0.32244685146240526 -0.20663826974858246 -0.86472066849359241 ;
+	setAttr ".t" -type "double3" 0.32244685146240548 -0.36243359860726654 -0.86472066849359241 ;
 	setAttr ".r" -type "double3" -6.1694211253430788 -21.953716621876882 5.7886871244085576 ;
 	setAttr ".s" -type "double3" 1 2.7544613476682946 1 ;
 	setAttr ".rp" -type "double3" 0 6.3518509864807129 1.0008022785186768 ;
@@ -12063,7 +12043,7 @@ createNode mesh -n "loftedSurfaceShape1" -p "loftedSurface1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pasted__loftedSurface1" -p "group1";
 	rename -uid "4557CE3D-4625-5CB6-071D-0B9A9C315321";
-	setAttr ".t" -type "double3" -1.2974674412245168 -18.381333423327469 4.2238278915737126 ;
+	setAttr ".t" -type "double3" -1.2974674412245166 -18.537128752186153 4.2238278915737126 ;
 	setAttr ".r" -type "double3" -156.64320032943667 -59.993738862432906 152.92959313894698 ;
 	setAttr ".s" -type "double3" 1.004221407253556 3.8421625091957949 1.0011869839097727 ;
 	setAttr ".sh" -type "double3" 0.064127070562450927 0.0062458503969756579 0.047340193643311664 ;
@@ -12520,7 +12500,7 @@ createNode mesh -n "pasted__loftedSurfaceShape1" -p "pasted__loftedSurface1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "loftedSurface2" -p "group1";
 	rename -uid "DD3FA597-456F-8B14-16D0-219BE1C869D3";
-	setAttr ".t" -type "double3" 0.3417923638565239 0.0090601851165033054 -1.7867409663248561 ;
+	setAttr ".t" -type "double3" 0.34179236385652412 -0.14673514374218083 -1.7867409663248561 ;
 	setAttr ".r" -type "double3" -23.700458555538155 117.34400367735388 -26.298501024807912 ;
 	setAttr ".s" -type "double3" 1 2.0636422170324753 1 ;
 	setAttr ".rp" -type "double3" -0.33071890473365784 6.0064754486083984 1.790812611579895 ;
@@ -13696,6 +13676,7 @@ createNode mesh -n "loftedSurfaceShape2" -p "loftedSurface2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "revolvedSurface1" -p "group1";
 	rename -uid "01CBC5AC-4164-49C2-E183-CFA2AB1C1E02";
+	setAttr ".t" -type "double3" 2.0984162440873169e-16 -0.15579532885868416 0 ;
 	setAttr ".rp" -type "double3" 0 4.9988784790039062 0 ;
 	setAttr ".sp" -type "double3" 0 4.9988784790039062 0 ;
 createNode mesh -n "revolvedSurfaceShape1" -p "revolvedSurface1";
