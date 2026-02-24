@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 517791957}
   - component: {fileID: 517791956}
   - component: {fileID: 517791955}
+  - component: {fileID: 517791959}
   m_Layer: 13
   m_Name: small Potions_0
   m_TagString: Untagged
@@ -836,6 +837,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &517791959
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517791954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7aea448f5536346448d48e9375324058, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &758876900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1956491192398141204, guid: 472b236829f81544fb4dd3af8df0a88b, type: 3}
@@ -1938,6 +1961,46 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   nameIdObj: {fileID: 11400000, guid: f7b05ed2186414f76b7648e4d51b4ad5, type: 2}
+--- !u!1 &1702139505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1368321072756685216, guid: ef08c47e1049e11449047c9943817648, type: 3}
+  m_PrefabInstance: {fileID: 1347610326325939309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1702139507
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702139505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 446a5cf2b23a93d43a1ea65f58c48181, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1702139509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702139505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58e542e4e133483ca34f3afb817f460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &1804241924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3089,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3980825292025557571, guid: ef08c47e1049e11449047c9943817648, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1697666100}
+    - targetCorrespondingSourceObject: {fileID: 1368321072756685216, guid: ef08c47e1049e11449047c9943817648, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702139507}
+    - targetCorrespondingSourceObject: {fileID: 1368321072756685216, guid: ef08c47e1049e11449047c9943817648, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702139509}
   m_SourcePrefab: {fileID: 100100000, guid: ef08c47e1049e11449047c9943817648, type: 3}
 --- !u!1001 &2260551036051210455
 PrefabInstance:
