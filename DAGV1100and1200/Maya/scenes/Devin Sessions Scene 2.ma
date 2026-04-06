@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Devin Sessions Scene 2.ma
-//Last modified: Thu, Apr 02, 2026 06:45:10 PM
+//Last modified: Mon, Apr 06, 2026 03:21:38 PM
 //Codeset: 1252
 file -rdi 1 -ns "weapon_rack_reference" -rfn "weapon_rack_referenceRN" -op "v=0;"
 		 -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya/assets/weapon rack reference.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "BD884BAD-4662-EDA8-5140-7987C831A8AB";
+fileInfo "UUID" "82EFF082-4854-A657-DCEC-068F2D13490C";
 createNode transform -s -n "persp";
 	rename -uid "43CC92FA-4B81-6F01-2D26-4AA3DDE498B9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 29.076274529135524 34.066288669985141 23.998228229892874 ;
-	setAttr ".r" -type "double3" -35.138352729637532 45.40000000001168 2.2648585432313772e-15 ;
+	setAttr ".t" -type "double3" 31.984494755950102 27.233021976965922 25.65716102855701 ;
+	setAttr ".r" -type "double3" -29.738352729638166 44.600000000011988 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8019E6F1-43A6-3312-E3AE-8F83FA2E3224";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 52.884448791528882;
+	setAttr ".coi" 57.202196784825347;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -617,13 +617,14 @@ createNode mesh -n "weapon_rack_reference:pCube13Shape" -p "weapon_rack_referenc
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.38893482089042664 0.79684340953826904 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "weapon_rack_referenceRNfosterParent1";
-	rename -uid "8189830C-4D46-74B5-2C17-2A902D8418C9";
+	rename -uid "C34A7E3A-4545-BA22-E3C0-F888B23DF32D";
 createNode transform -n "weapon_rack_reference:transform1" -p "weapon_rack_referenceRNfosterParent1";
 	rename -uid "0E1FF9C2-4241-3BC9-9726-2E99EAC48E7B";
 	setAttr ".v" no;
@@ -697,20 +698,20 @@ createNode transform -n "weapon_rack_reference:transform24" -p "weapon_rack_refe
 	rename -uid "2C00B11D-4F9C-2DD8-5148-82B1822A94E6";
 	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2DA0D35E-4620-3968-DFCD-3F85535C0834";
+	rename -uid "47034E5C-4BF2-E906-A549-E9977FBB4B59";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3E29245A-40BF-74AC-B9D7-379E797A312C";
+	rename -uid "BAC3B200-4EAD-A17B-482D-76A975D5340B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BCE6B8A8-41D4-96F2-A8DA-DA873AD91399";
+	rename -uid "93EA6FCD-4C53-C12D-8567-97978482EC39";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "ADF51787-4DF7-96AE-F800-D09B0D2494FE";
+	rename -uid "5517B8A0-4E20-CBC3-DB3A-86B5D991A8EA";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DA68EE47-44F1-574E-5A95-9AB08534C035";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "84CCBA85-4D54-F992-79D5-3282DD7026AE";
+	rename -uid "8698703D-418C-1833-56A9-90B55F6063AF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C78D557D-4C02-9EF8-05F9-F7945F3C9501";
 	setAttr ".g" yes;
@@ -1329,10 +1330,6 @@ createNode reference -n "weapon_rack_referenceRN";
 		2 "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform1|weapon_rack_reference:pSphereShape27" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:701]\""
 		
-		3 "weapon_rack_reference:polyTweakUV38.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform22|weapon_rack_reference:pSphereShape9.inMesh" 
-		""
-		3 "weapon_rack_reference:polyTweakUV34.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform24|weapon_rack_reference:pCubeShape13.inMesh" 
-		""
 		3 "weapon_rack_reference:polyTweakUV5.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform23|weapon_rack_reference:pCubeShape17.inMesh" 
 		""
 		3 "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform24|weapon_rack_reference:pCubeShape13.instObjGroups" 
@@ -1371,7 +1368,11 @@ createNode reference -n "weapon_rack_referenceRN";
 		"weapon_rack_reference:lambert2SG.dagSetMembers" "-na"
 		3 "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform1|weapon_rack_reference:pSphereShape27.instObjGroups" 
 		"weapon_rack_reference:lambert2SG.dagSetMembers" "-na"
+		3 "weapon_rack_reference:polyTweakUV38.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform22|weapon_rack_reference:pSphereShape9.inMesh" 
+		""
 		3 "weapon_rack_reference:polyTweakUV11.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform21|weapon_rack_reference:pCubeShape18.inMesh" 
+		""
+		3 "weapon_rack_reference:polyTweakUV34.output" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform24|weapon_rack_reference:pCubeShape13.inMesh" 
 		""
 		5 4 "weapon_rack_referenceRN" "|weapon_rack_referenceRNfosterParent1|weapon_rack_reference:transform1|weapon_rack_reference:pSphereShape27.instObjGroups.objectGroups[0].objectGroupId" 
 		"weapon_rack_referenceRN.placeHolderList[1]" ""
@@ -2352,13 +2353,13 @@ connectAttr "polyCylinder1.out" "pCylinderShape1.i";
 connectAttr "polyCube9.out" "pCubeShape11.i";
 connectAttr "polyCube10.out" "pCubeShape12.i";
 connectAttr "polyCylinder2.out" "pCylinderShape3.i";
-connectAttr "weapon_rack_reference:groupParts8.og" "weapon_rack_reference:pCube13Shape.i"
-		;
 connectAttr "weapon_rack_reference:groupId49.id" "weapon_rack_reference:pCube13Shape.iog.og[0].gid"
 		;
 connectAttr "weapon_rack_reference:groupId50.id" "weapon_rack_reference:pCube13Shape.iog.og[1].gid"
 		;
 connectAttr "weapon_rack_reference:groupId51.id" "weapon_rack_reference:pCube13Shape.ciog.cog[0].cgid"
+		;
+connectAttr "weapon_rack_reference:groupParts8.og" "weapon_rack_reference:pCube13Shape.i"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
