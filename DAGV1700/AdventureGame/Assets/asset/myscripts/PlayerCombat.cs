@@ -1,34 +1,84 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public GameObject attackZone; // Drag your AttackZone object here in the Inspector
-    public float attackDuration = 0.2f; // How long the hitbox stays active
-    private bool isAttacking = false;
+    public int health = 100;
+    public GameObject gameOverScreen; // Drag your Canvas here
+
+    private Animator anim;
+    private Rigidbody rb;
+    private bool isDead = false;
+    private bool isJumping = false;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-        // Detect Left Mouse Click (Fire1)
-        if (Input.GetButtonDown("Fire1") && !isAttacking)
+        if (isDead) return;
+
+        // MOVEMENT
+        float move = Input.GetAxisRaw("Horizontal");
+        if (move > 0) transform.localScale = new Vector3(1, 1, 1);
+        else if (move < 0) transform.localScale = new Vector3(-1, 1, 1);
+
+        // ANIMATION STATES
+        if (!isJumping)
         {
-            StartCoroutine(Attack());
+            anim.SetBool("Grounded", true);
+            if (move != 0) anim.SetInteger("AnimState", 1);
+            else anim.SetInteger("AnimState", 0);
+        }
+
+        // ATTACK LOGIC (Moved outside of the jumping check for now)
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Debug.Log("Swing detected!"); // Check your Console for this!
+            anim.SetTrigger("Attack1");
+        }
+
+        // JUMP
+        if (Input.GetButtonDown("Jump") && !isJumping)
+        {
+            StartCoroutine(HandleJump());
         }
     }
 
-    IEnumerator Attack()
+    IEnumerator HandleJump()
     {
-        isAttacking = true;
+        isJumping = true;
+        anim.SetBool("Grounded", false);
+        anim.SetTrigger("Jump");
+        // Add physics jump here if you want: rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        yield return new WaitForSeconds(0.8f);
+        isJumping = false;
+    }
 
-        // "Swing" the hitbox
-        attackZone.SetActive(true);
+    public void TakeDamage(int damage)
+    {
+        if (isDead) return;
+        health -= damage;
+        if (health <= 0) StartCoroutine(Die());
+        else anim.SetTrigger("Hurt");
+    }
 
-        // Wait for a fraction of a second
-        yield return new WaitForSeconds(attackDuration);
+    IEnumerator Die()
+    {
+        isDead = true;
+        anim.SetTrigger("Death");
+        yield return new WaitForSeconds(1.5f);
+        if (gameOverScreen != null) gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
 
-        // Retract the hitbox
-        attackZone.SetActive(false);
-
-        isAttacking = false;
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
